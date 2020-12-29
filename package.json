@@ -1,0 +1,35 @@
+{
+  "name": "use-state-plus",
+  "version": "1.0.0",
+  "description": "An extended version of React's useState hook with extra tools and less code",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonyito/use-state-plus.git"
+  },
+  "keywords": ["react", "hooks", "useState"],
+  "author": "Tony Ito-Cole",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonyito/use-state-plus/issues"
+  },
+  "homepage": "https://github.com/tonyito/use-state-plus#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.1.3"
+  },
+  "files": ["lib/**/*"]
+}
