@@ -9,7 +9,7 @@ Works with TypeScript too!
 
 * **Single Line State Initialization** Instead of calling useState on multiple lines for each useState call, developers can pass a single object with key value pairs of the initial state just like in class components.
 
-* **Getter and Setter Functions** Developers that prefer using methods that mimic encapsulation similar to those used in languages like Java can now use getters and setters to retrieve and set state, so naming conventions are consistent accross the codebase.
+* **Getter and Setter Functions** Developers that prefer using methods that mimic encapsulation similar to those used in languages like Java can now use getters and setters to retrieve and set state, so naming conventions are consistent across the codebase.
 
 * **Setting multiple states in a single call** Instead of calling state setting functions one by one in event handlers, developers can pass any form of state that they want in a single object like in class components to mutate the state. 
 
