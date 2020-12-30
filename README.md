@@ -1,26 +1,31 @@
 # useState+
-An extended version of React's useState hook with extra tools
 
-useState+ is simply an extension of the useState hook that will allow for cleaner code that is easier to read and write for all kinds of web applications.
+useState+ is simply an extension of the useState function that allows developers to abstract away many commonly implemented features of this popular React hook. 
 
-Works with TypeScript too!
+This package aims to improve readability of functional components in React, and make state management easier within single functional components.
 
 ## Features
 
-* **Single Line State Initialization** Instead of calling useState on multiple lines for each useState call, developers can pass a single object with key value pairs of the initial state just like in class components.
+* **Single Line State Initialization** Instead of calling useState on multiple lines, developers can pass a single object with key value pairs of the initial state just like in class components.
 
 * **Getter and Setter Functions** Developers that prefer using methods that mimic encapsulation similar to those used in languages like Java can now use getters and setters to retrieve and set state, so naming conventions are consistent across the codebase.
 
 * **Setting multiple states in a single call** Instead of calling state setting functions one by one in event handlers, developers can pass any form of state that they want in a single object like in class components to mutate the state. 
 
-* **Built-in state resetting functions** Functions that reset both a single variable in the state or the entire state are available in this package. 
+* **Built-in history navigation and memory retention of state** Perhaps the strongest feature of this library, there are functions that allow simple resetting of state without needing to remember the initial state. In addition, functions that allow for navigation of history in the state without the use of an exernal router (a feature that can be beneficial for those who develop standalone Electron applications that don't rely on the URI for maintaining history) are available.
 
 ## How to use
 
 Here is how to initialize state using useState+:
 
-```jsx 
-    const { ticker } = useStatePlus({ ticker: 0 });
+```tsx 
+
+    import useStatePlus from 'use-state-plus';
+
+    interface MyInterface {
+      ticker: number;
+    }
+    const { ticker } = useStatePlus<MyInterface>({ ticker: 0 });
 
     //You call getter and setter methods to manipulate state like this:
 
@@ -65,7 +70,13 @@ You can also use methods included in useState+ to manipulate multiple values in 
     )
 ```
 
-This tool is still very young and not production ready! Please feel free to report bugs and open PRs to improve this tool.
+These additional functions exist as well (pretty straight forward, but documentation coming soon!)
 
-Thanks!
+```jsx
+      <button onClick={() => { multiReset(['switcher', 'times'])}}>Reset two.</button>
+      <button onClick={() => { goBack() }}>Go Back 1.</button>
+      <button onClick={() => { goForward(2) }}>Go Forward 2.</button>
+```
+
+
 
