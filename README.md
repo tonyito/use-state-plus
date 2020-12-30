@@ -25,6 +25,7 @@ Here is how to initialize state using useState+:
     interface MyInterface {
       ticker: number;
     }
+
     const { ticker } = useStatePlus<MyInterface>({ ticker: 0 });
 
     //You call getter and setter methods to manipulate state like this:
@@ -70,7 +71,7 @@ You can also use methods included in useState+ to manipulate multiple values in 
     )
 ```
 
-These additional functions exist as well (pretty straight forward, but documentation coming soon!)
+Additional history navigation and state reset function usage:
 
 ```jsx
       <button onClick={() => { multiReset(['switcher', 'times'])}}>Reset two.</button>
