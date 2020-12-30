@@ -1,6 +1,6 @@
 {
   "name": "use-state-plus",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An extended version of React's useState hook with extra tools and less code",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
