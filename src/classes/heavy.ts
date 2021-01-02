@@ -1,5 +1,5 @@
 import { MainClass } from './index';
-.
+
 export class HeavyVersion extends MainClass<any> {
   /**
    * Rewinds state by x amount of steps.

@@ -28,19 +28,19 @@ export class StateVariable<T> {
     return this.temp;
   };
 
-  public set = (arg: keyof T) => {
+  public set = (arg: T[keyof T]) => {
     this.setTemp(arg);
     if (!this.lite) this.setNextHistory({ [this.value]: arg });
     return;
   };
 
-  public setWithoutHistory = (arg: keyof T) => {
+  public setWithoutHistory = (arg: T[keyof T]) => {
     this.setTemp(arg);
     return;
   };
 
   public reset = () => {
-    this.setTemp(this.initialValues[this.value]);
+    this.set(this.initialValues[this.value]);
     return;
   };
 }

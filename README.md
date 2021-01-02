@@ -1,18 +1,20 @@
 # useState+
 
-useState+ is simply an extension of the useState function that allows developers to abstract away many commonly implemented features of this popular React hook. 
+useState+ is an extension of React's useState hook.
 
-This package aims to improve readability of functional components in React, and make state management easier within single functional components.
+This package aims to improve the ease of state manipulation in React using a custom hook, and make state management more robust within functional components.
+
+See it in action [here](https://codesandbox.io/s/dazzling-haze-t5o1z)!
 
 ## Features
 
 * **Single Line State Initialization** Instead of calling useState on multiple lines, developers can pass a single object with key value pairs of the initial state just like in class components.
 
-* **Getter and Setter Functions** Developers that prefer using methods that mimic encapsulation similar to those used in languages like Java can now use getters and setters to retrieve and set state, so naming conventions are consistent across the codebase.
+* **Getter and Setter Functions** Developers who prefer using methods that mimic encapsulation syntax similar to those used in languages like Java can now use getters and setters to retrieve and set state, so naming conventions are consistent across the codebase.
 
-* **Setting multiple states in a single call** Instead of calling state setting functions one by one in event handlers, developers can pass any form of state that they want in a single object like in class components to mutate the state. 
+* **Setting multiple state variables in a single call** Instead of calling state setting functions one by one in event handlers, developers can pass any form of state that they want in a single object like in class components to mutate the state. 
 
-* **Built-in history navigation and memory retention of state** Perhaps the strongest feature of this library, there are functions that allow simple resetting of state without needing to remember the initial state. In addition, functions that allow for navigation of history in the state without the use of an exernal router are available. This is a feature that can be beneficial for those who develop standalone Electron applications that don't rely on the URI for maintaining history.
+* **Built-in history navigation and state reset functions** Perhaps the strongest feature of this library, these functions allow simple resetting of state without needing to remember the values of the initial state. In addition, functions that allow for navigation of history in the state without the use of an exernal router are available. This is a feature that can be beneficial for those who develop standalone Electron apps or large single page applications.
 
 ## How to use
 
@@ -44,7 +46,7 @@ Here is how to initialize state using useState+:
     )
 ```
 
-You can also use methods included in useState+ to manipulate multiple values in state like this: 
+You can also use methods included in useState+ to control multiple variables in state like this: 
 
 ```tsx 
 
@@ -107,5 +109,5 @@ Additional history navigation and state reset function usage:
     )
 ```
 
-A lite version of this library can be imported as `useStatePlusLite` for those who run into performance issues when using history management functionality. 
+A lite version of this library can be imported as `useStatePlusLite` for those who run into performance issues when using the history management feature. 
 
